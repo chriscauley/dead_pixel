@@ -5,24 +5,15 @@ Ever want to randomly add dead pixels to your web page to mess with your coworke
 
 ```html
 <script src="/path/to/dead_pixel.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", deadPixel();, false);
-</script>
 ```
 
-or add 100 2x2 dead pixels!
-```html
-<script src="/path/to/dead_pixel.js"></script>
-<script>
-function kill1000() {
-  var i = 1000;
-  while (i--) { deadPixel(2) }
-}
-document.addEventListener("DOMContentLoaded", kill1000;, false);
-</script>
-```
+Every time the page is loaded the there is a 50/50 chance a dead pixel will be generated. All previous pixels are preserved with every page load. So after a person visits your site 100 times they will have 50 dead pixels. Clearing cookies removes the pixels.
 
 Comming soon(ish)
 ========
+
+Demo page.
+
+Chrome extension (global dead pixels).
 
 Django middleware to add dead pixels to any project when `settings.DEBUG = True` and an IP is in `settings.INTERNAL_IPs`.
